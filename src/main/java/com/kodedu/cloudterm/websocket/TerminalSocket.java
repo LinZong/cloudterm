@@ -2,7 +2,7 @@ package com.kodedu.cloudterm.websocket;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kodedu.cloudterm.service.TerminalService;
+import com.kodedu.cloudterm.service.TermdTerminalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -15,10 +15,11 @@ import java.util.Map;
 
 public class TerminalSocket extends TextWebSocketHandler {
 
-    private final TerminalService terminalService;
+    private final TermdTerminalService terminalService;
+
 
     @Autowired
-    public TerminalSocket(TerminalService terminalService) {
+    public TerminalSocket(TermdTerminalService terminalService) {
         this.terminalService = terminalService;
     }
 

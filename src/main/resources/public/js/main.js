@@ -64,11 +64,12 @@ $(() => {
       resizeTerm(term, ws);
       term.resized = true;
     }
-    let data = JSON.parse(e.data);
-    switch (data.type) {
-      case 'TERMINAL_PRINT':
-        term.write(data.text);
-    }
+    term.write(e.data);
+    // let data = JSON.parse(e.data);
+    // switch (data.type) {
+    //   case 'TERMINAL_PRINT':
+    //     term.write(data.text);
+    // }
   };
 
   ws.onerror = e => {

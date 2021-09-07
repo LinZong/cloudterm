@@ -95,7 +95,7 @@ public class TerminalService {
         map.put("text", text);
 
         String message = new ObjectMapper().writeValueAsString(map);
-
+        System.out.println(message);
         webSocketSession.sendMessage(new TextMessage(message));
 
     }
@@ -108,6 +108,7 @@ public class TerminalService {
             while ((nRead = bufferedReader.read(data, 0, data.length)) != -1) {
                 StringBuilder builder = new StringBuilder(nRead);
                 builder.append(data, 0, nRead);
+                System.out.println("Reader: " + builder.toString());
                 print(builder.toString());
             }
 

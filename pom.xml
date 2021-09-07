@@ -44,9 +44,29 @@
         </dependency>
 
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.78</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>30.1.1-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>org.fusesource.jansi</groupId>
+            <artifactId>jansi</artifactId>
+            <version>2.3.4</version>
+        </dependency>
+        <dependency>
             <groupId>com.kodedu.pty4j</groupId>
             <artifactId>pty4j</artifactId>
             <version>0.7.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.middleware</groupId>
+            <artifactId>termd-core</artifactId>
+            <version>1.1.7.12</version>
         </dependency>
 
     </dependencies>
